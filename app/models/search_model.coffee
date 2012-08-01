@@ -9,7 +9,7 @@ module.exports = class SearchModel extends Backbone.Model
         @on 'change:query', @search
 
     search: ->
-        $.getJSON("https://api.github.com/legacy/repos/search/#{@get('query')}").done (response) =>
+        $.getJSON("https://api.github.com/legacy/repos/search/#{@get('query')}?callback=?").done (response) =>
             repos = _.sortBy response.repositories, (repo) -> -repo.watchers
             @searchHackers repos.slice 0, 3
 
@@ -17,7 +17,7 @@ module.exports = class SearchModel extends Backbone.Model
         place = 1
         findHacker = ->
             repo = repos.shift()
-            $.getJSON("https://api.github.com/users/#{repo.owner}").done (hacker) =>
+            $.getJSON("https://api.github.com/users/#{repo.owner}?callback=?").done (hacker) =>
                 _.extend hacker, { repoName: repo.name, repoLanguage: repo.language, repoFollowers: repo.followers, repoUrl: repo.url, place: place }
                 Backbone.Mediator.publish 'hacker:added', hacker
                 place += 1
