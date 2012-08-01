@@ -1,0 +1,21 @@
+<span class="hacker-place">{{ordinalize place}}</span>
+<img class="hacker-img" src="{{avatar_url}}" width="62" height="62">
+<div class="hacker-info">
+    <a class="hacker-name" href="{{html_url}}" target="_blank">{{name}} <span class="hacker-username">{ {{login}} }</span></a>
+    <div class="hacker-stats">
+        <span class="hacker-repos">
+            {{inflect public_repos "repo" "repos" true}}
+        </span> <!-- .hacker-repos -->
+        &middot;
+        <span class="hacker-followers">
+            {{inflect followers "follower" "followers" true}}
+        </span> <!-- .hacker-followers -->
+    </div> <!-- .hacker-stats -->
+    <div class="hacker-repo">
+        <a class="hacker-repo-name" href="{{repoUrl}}">{{repoName}}</a>
+        &middot;
+        <span class="hacker-repo-language">{{default repoLanguage "No Language"}}</span>
+        &middot;
+        <span class="hacker-repo-followers"><i class="icon-eye-open"></i></span> {{repoFollowers}}
+    </div> <!-- .hacker-repo -->
+</div> <!-- .hacker-info -->

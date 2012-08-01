@@ -1,0 +1,57 @@
+// Hacker
+
+.hackers-list
+    background #f8f8f8
+    border 1px solid #f0f0f0
+    border-radius 3px
+    box-shadow 0 1px 0 #fff
+    margin 20px auto
+    padding 3px
+    width 600px
+
+    &[data-state~="loading"]
+        background url('../images/loading.gif') no-repeat center center #f8f8f8
+        height 150px
+
+.hacker
+    background #fff
+    border 1px solid #ddd
+    box-shadow 0 1px 0 #fff
+    margin-bottom -1px
+    padding 10px
+
+    &:last-child
+        margin-bottom 0
+
+.hacker-place
+    font-size 30px
+    float left
+    margin 12px 15px 0 0
+
+.hacker-info
+    float left
+    max-width 400px
+
+.hacker-img
+    border-radius 100px
+    box-shadow 0 1px 0 #fff
+    float left
+    margin-right 15px
+
+.hacker-name
+    font-size 20px
+
+.hacker-username
+    font-size 12px
+
+.hacker-stats,
+.hacker-repo
+    font-size 14px
+    margin-top 5px
+
+.hacker-repo-name
+    display inline-block
+    max-width 220px
+    text-overflow ellipsis
+    overflow hidden
+    white-space nowrap
