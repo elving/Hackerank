@@ -9,7 +9,8 @@
     "url": "https://github.com/elving/Hackerank"
   },
   "engines": {
-    "node": "0.8.4"
+    "node": "0.6.x",
+    "npm": "1.1.x"
   },
   "scripts": {
     "start": "brunch watch --server"
