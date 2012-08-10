@@ -27,7 +27,10 @@
     "uglify-js-brunch": "> 1.0 < 1.5",
     "clean-css-brunch": "> 1.0 < 1.5",
 
-    "auto-reload-brunch": "> 1.0 < 1.5"
+    "auto-reload-brunch": "> 1.0 < 1.5",
+
+    "coffee-script": "",
+    "express": ""
   },
   "devDependencies": {
     "mocha": "0.14.0",
