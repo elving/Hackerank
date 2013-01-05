@@ -5,6 +5,11 @@ Hackerank.Views ?= {}
 Hackerank.Models ?= {}
 Hackerank.Collections ?= {}
 
+# Load App Helpers
+require 'lib/app_helpers'
+
 $ ->
+    AppView = require 'views/app'
+
     # Initialize App
-    Hackerank.Views.AppView = new AppView = require 'views/app_view'
+    Hackerank.Views.App = new AppView()

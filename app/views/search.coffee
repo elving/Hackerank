@@ -1,4 +1,7 @@
-module.exports = class SearchView extends Backbone.View
+View  = require 'lib/view'
+Model = require 'models/search'
+
+module.exports = class SearchView extends View
     el: 'section.search'
 
     events:
@@ -6,10 +9,12 @@ module.exports = class SearchView extends Backbone.View
         'keyup input.search-input': (event) -> @search() if event.keyCode is 13
 
     initialize: ->
-        @model = Hackerank.Models.SearchModel = new SearchModel = require '../models/search_model'
+        @model = Hackerank.Models.Search = new Model()
 
     search: (event) ->
         event.preventDefault() if event?
-        Backbone.Mediator.publish 'search:new'
+        Backbone.Events.trigger 'search:new'
         @model.set query: $.trim @$el.find('input.search-input').val()
+
+
 
