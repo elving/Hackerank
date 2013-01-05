@@ -29,10 +29,11 @@
 
         "coffeelint-brunch": "> 1.0 < 1.5",
 
-        "auto-reload-brunch": "> 1.0 < 1.5"
+        "auto-reload-brunch": "> 1.0 < 1.5",
+
+        "coffee-script": "1.4.0"
     },
     "devDependencies": {
-        "coffee-script": "1.4.0",
         "mocha": "0.14.0",
         "expect.js": "0.1.2",
         "ws": "0.4.21"
