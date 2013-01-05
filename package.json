@@ -31,7 +31,9 @@
 
         "auto-reload-brunch": "> 1.0 < 1.5",
 
-        "coffee-script": "1.4.0"
+        "coffee-script": "1.4.0",
+
+        "express": "2.x.x"
     },
     "devDependencies": {
         "mocha": "0.14.0",
