@@ -1,3 +1,3 @@
 module.exports = class HackerCollection extends Backbone.Collection
     initialize: ->
-        Backbone.Events.on 'hacker:added', (hacker) => @add hacker
+        @listenTo Backbone.Events, 'hacker:added', @add

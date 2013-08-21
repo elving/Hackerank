@@ -1,15 +1,9 @@
-# App Namespace
-@Hackerank ?= {}
-Hackerank.Routers ?= {}
-Hackerank.Views ?= {}
-Hackerank.Models ?= {}
-Hackerank.Collections ?= {}
-
 # Load App Helpers
-require 'lib/app_helpers'
+require 'lib/helpers'
+
+# Initialize Router
+require 'routers/main'
 
 $ ->
-    AppView = require 'views/app'
-
-    # Initialize App
-    Hackerank.Views.App = new AppView()
+    # Initialize Backbone History
+    Backbone.history.start pushState: yes

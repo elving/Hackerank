@@ -1,0 +1,23 @@
+{
+  "name": "swag",
+  "version": "0.3.0",
+  "main": "lib/swag.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "handlebars.js": "~1.0.0"
+  },
+  "homepage": "https://github.com/elving/swag",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "55df4a724fde9451fc27b54c0e11e855955ff6b8"
+  },
+  "_source": "git://github.com/elving/swag.git",
+  "_target": "~0.3.0",
+  "_originalSource": "swag"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "h5bp-helpers",
+  "version": "0.1.0",
+  "main": "helpers.css",
+  "description": "Helpers (for printing etc) from html5boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

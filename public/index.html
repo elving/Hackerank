@@ -18,39 +18,36 @@
             window.brunch['auto-reload'] = { enabled: true };
         </script>
 
-        <script src="javascripts/modernizr.js"></script>
-
-        <link rel="stylesheet" href="stylesheets/app.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/app.css">
     </head>
 
-    <body class="application">
+    <body>
         <!--[if lt IE 8]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <div class="layout-container layout-centered">
-            <h1 class="application-title">Hackerank</h1>
+        <section class="app">
+            <div class="layout-container layout-centered">
+                <h1 class="application-title">Hackerank</h1>
 
-            <section class="search">
-                <div class="search-wrapper clearfix">
-                    <input type="search" class="search-input" placeholder="e.g. Coffeescript, Backbone, Node">
-                    <a class="search-button ui-button" href="#"><i class="icon-search"></i> Search</a>
-                </div> <!-- .search-wrapper -->
-            </section>
-            <!-- .search -->
+                <section class="search">
+                    <div class="search-wrapper clearfix">
+                        <input type="search" class="search-input" placeholder="e.g. Coffeescript, Backbone, Node">
+                        <a class="search-button ui-button" href="#"><i class="icon-search"></i> Search</a>
+                    </div> <!-- .search-wrapper -->
+                </section> <!-- .search -->
 
-            <section class="hackers">
-                <ol class="hackers-list ui-list" data-state="hidden">
-                </ol> <!-- .hackers-list -->
-            </section>
-            <!-- .results -->
+                <section class="hackers">
+                    <ol class="hackers-list ui-list" data-state="hidden">
+                    </ol> <!-- .hackers-list -->
+                </section> <!-- .results -->
 
-            <footer class="application-footer">This app was built using <a href="https://github.com/elving/brunch-with-hipsters">Brunch with Hipsters</a></footer>
-        </div>
-        <!-- .layout-container -->
+                <footer class="application-footer">This app was built using <a href="https://github.com/elving/brunch-with-hipsters">Brunch with Hipsters</a></footer>
+            </div> <!-- .layout-container -->
+        </section>
 
-        <script src="javascripts/vendor.js" defer></script>
-        <script src="javascripts/app.js" defer onload="require('initialize');"></script>
+        <script src="js/app.js" onload="require('initialize');"></script>
 
          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

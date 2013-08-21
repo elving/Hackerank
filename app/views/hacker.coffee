@@ -1,11 +1,10 @@
-View = require 'lib/view'
-
-module.exports = class HackerView extends View
+module.exports = class HackerView extends Backbone.View
     tagName: 'li'
 
     className: 'hacker clearfix'
 
     template: require 'views/templates/hacker'
 
-    getRenderData: ->
-        @model.toJSON()
+    render: ->
+        @$el.html @template @model.toJSON()
+        this

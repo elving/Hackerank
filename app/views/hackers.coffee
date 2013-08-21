@@ -1,23 +1,24 @@
-View       = require 'lib/view'
-Collection = require 'collections/hackers'
-HackerView = require 'views/hacker'
-
-module.exports = class HackersView extends View
+module.exports = class HackersView extends Backbone.View
     el: 'section.hackers'
 
     initialize: ->
-        @collection = Hackerank.Collections.Hackers = new Collection()
-        @collection.on 'add', @addHacker, @
+        Hackers = require 'collections/hackers'
+        @collection = new Hackers()
 
-        Backbone.Events.on 'search:new', @cleanResults, @
+        @listenTo @collection, 'add', @addHacker
+        @listenTo Backbone.Events, 'search:new', @cleanResults
 
     cleanResults: ->
         @collection.reset()
-        @$el.find('ol.hackers-list').empty().attr 'data-state', 'loading'
+        @$el.find('ol.hackers-list')
+            .empty()
+            .attr 'data-state', 'loading'
 
     addHacker: (hacker) ->
-        view = new HackerView model: hacker
+        Hacker = require 'views/hacker'
+        HackerView = new Hacker model: hacker
+
         @$el.find('ol.hackers-list')
-        .attr('data-state', 'default')
-        .append(view.render().el)
+            .attr('data-state', 'default')
+            .append HackerView.render().el
 
